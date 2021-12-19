@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Lava Java Cafee` -- GALLERY</title>
+  <link rel="stylesheet" href="style1.css">
+  <link rel="icon" href="images/coficon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      <a href="indexcafe.html"><img src="images/coflogo.jpg" alt="logo"></a>
+        <h1> Lava Java Cafee`</h1>
+    </header>
+
+
+<nav>
+  <ul>
+    <li><a href="indexcafe.html">Home</a></li>
+    <li><a href="about.html">About</a>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </li>
+    <li><a href="menu.html">Menu</a> </li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="team.html"> Team</a></li>
+    <li><a href="contact.html"> Contact Us</a></li>
+    
+  </ul>
+</nav>
+
+    <div id="galleryhero">  </div>
+
+    <main>
+         <h3> Some Previews of our Cafe</h3>
+         <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 6</div>
+            <img src="images/c1.jpg" style="width:995px" alt="img">
+            <div class="text">Entrance</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 6</div>
+            <img src="images/c2.jpg" style="width:990px" alt="img">
+            <div class="text">Outside Main </div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 6</div>
+            <img src="images/c3.jpg" style="width:990px" alt="img">
+            <div class="text">Backside Street</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 6</div>
+            <img src="images/c4.jpg" style="width:990px" alt="img">
+            <div class="text">Lake View</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 6</div>
+            <img src="images/c5.jpg" style="width:990px" alt="img">
+            <div class="text">Delicious Donuts</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">6 / 6</div>
+            <img src="images/c10.jpg" style="width:990px" alt="img">
+            <div class="text">Refreshing Drinks</div>
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+          </div>
+    </main>
+
+    <footer>
+      Copyright &copy;  2021 Lava Java Cafe`<br>
+
+     <a href="#" class="fa fa-facebook"></a>
+     <a href="#" class="fa fa-twitter"></a>
+     <a href="#" class="fa fa-google"></a>
+     <a href="#" class="fa fa-linkedin"></a>
+     <a href="#" class="fa fa-youtube"></a> 
+
+     <address>
+     
+       Store hours:
+        Mon - Fri :<i class="fa fa-clock-o"></i> 4 a.m. to 9 p.m. <br>
+        Sat - Sun :<i class="fa fa-clock-o"></i> 4 a.m. to 9 p.m. <br>
+             
+      <i class="fa fa-phone"></i> <a  href="tel:364-513-6621">364-513-6621</a>
+      <i class="fa fa-envelope"></i><a href="mailto:lavajava25@gmail.com">lavajava25@gmail.com</a>
+     </address>
+
+     <h4><a href="terms.html"> Terms & Privacy Policy</a></h4>
+ </footer>
+  </div>
+  
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+</body>
+</html>
